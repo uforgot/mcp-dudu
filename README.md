@@ -30,11 +30,13 @@ Use `DUDU_ENV_FILE` to load a different file. Existing process environment varia
 
 ## Codex
 
-Register the npm package globally in Codex configuration:
+For the private GitHub repository, first make sure GitHub authentication works on the computer. Then register the package globally in Codex configuration:
 
 ```bash
-codex mcp add mcp-dudu -- npx -y mcp-dudu
+codex mcp add mcp-dudu -- npx -y github:uforgot/mcp-dudu
 ```
+
+After publishing to npm, the command can be shortened to `npx -y mcp-dudu`.
 
 Verify:
 
@@ -56,7 +58,7 @@ Restart open Codex sessions after changing MCP configuration.
 Register for the current user:
 
 ```bash
-claude mcp add --scope user mcp-dudu -- npx -y mcp-dudu
+claude mcp add --scope user mcp-dudu -- npx -y github:uforgot/mcp-dudu
 ```
 
 Verify:
