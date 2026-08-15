@@ -1,0 +1,42 @@
+{
+  "name": "mcp-dudu",
+  "version": "0.1.0",
+  "description": "MCP server for Dudu task management",
+  "type": "module",
+  "bin": {
+    "mcp-dudu": "dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "test": "node --import tsx --test src/server.test.ts",
+    "typecheck": "tsc --noEmit",
+    "prepack": "npm run clean && npm run build"
+  },
+  "keywords": [
+    "mcp",
+    "codex",
+    "task-management"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uforgot/mcp-dudu.git"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "dotenv": "^17.4.2",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.1",
+    "tsx": "^4.23.12",
+    "typescript": "^5.9.3"
+  }
+}
